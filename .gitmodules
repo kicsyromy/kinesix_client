@@ -1,0 +1,3 @@
+[submodule "daemon"]
+	path = daemon
+	url = http://git.kicsyromy.me/kinesix/daemon.git

@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="fingers">res/fingers.png</file>
+        <file alias="pinch-in">res/pinch-in.png</file>
+        <file alias="pinch-out">res/pinch-out.png</file>
+        <file alias="swipe-down">res/swipe-down.png</file>
+        <file alias="swipe-left">res/swipe-left.png</file>
+        <file alias="swipe-right">res/swipe-right.png</file>
+        <file alias="swipe-up">res/swipe-up.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file alias="touchpad">res/touchpad.png</file>
+    </qresource>
+</RCC>

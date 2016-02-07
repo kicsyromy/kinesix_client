@@ -56,6 +56,7 @@ namespace kinesix
         void onDeviceSelected(const QModelIndex &index);
         void onGestureClicked(const QModelIndex &index);
         void onSwiped(int direction, int fingerCount);
+        void onPinch(int pinchType, int fingerCount);
         void assign3FingerKeyCombination();
         void assign3FingerCommand();
         void assign4FingerKeyCombination();

@@ -55,6 +55,7 @@ MainWindow::MainWindow(QWidget *parent) :
     m_closeRequested(false)
 {
     connect(&m_dbusProxy, &KinesixdProxy::Swiped, this, &MainWindow::onSwiped);
+    connect(&m_dbusProxy, &KinesixdProxy::Pinch, this, &MainWindow::onPinch);
     connect(&ui.gestureListView, &QListView::clicked, this, &MainWindow::onGestureClicked);
     connect(&m_inputHandler, &InputHandler::keybindFinished, this, &MainWindow::onKeybindFinished);
     connect(&m_inputHandler, &InputHandler::keyPressed, this, &MainWindow::onKeyPressed);
@@ -128,6 +129,11 @@ void MainWindow::onSwiped(int direction, int fingerCount)
     auto it = m_actions.find(std::make_pair(gestureValue(direction), fingerCount));
     if (it != m_actions.end())
         it->second->execute();
+}
+
+void MainWindow::onPinch(int pinchType, int fingerCount)
+{
+    LOG_DEBUG("Caught signal Pinch with args: %s and %d", gestureToString(gestureValue(pinchType + 4)), fingerCount);
 }
 
 void MainWindow::assign3FingerKeyCombination()

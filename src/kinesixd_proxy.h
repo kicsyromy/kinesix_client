@@ -43,6 +43,7 @@ namespace kinesix
 
     signals:
         void Swiped(int direction, int finger_count);
+        void Pinch(int pinch_type, int finger_count);
     };
 }
 

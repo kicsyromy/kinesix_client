@@ -5,7 +5,7 @@ build:
     script:
         - cd src/
         - mkdir -p build; cd build
-        - make distclean; qmake -r ../Kinesix.pro
+        - [[ -f Makefile]] || make distclean; qmake -r ../Kinesix.pro
         - make
         - cd ..
         - rm -rf output; mkdir output
